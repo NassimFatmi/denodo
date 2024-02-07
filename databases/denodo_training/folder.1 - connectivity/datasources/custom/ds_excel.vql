@@ -1,5 +1,6 @@
 ﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
 CREATE OR REPLACE DATASOURCE CUSTOM ds_excel
+    FOLDER = '/1 - connectivity'
     CLASSNAME='com.denodo.vdb.contrib.wrapper.xls.ExcelWrapper';
 
 CREATE OR REPLACE WRAPPER CUSTOM ds_excel
