@@ -1,0 +1,18 @@
+﻿CREATE OR REPLACE TABLE bv_excel I18N fr_euro (
+        id:int (sourcetypeid = '4'),
+        name:text (sourcetypeid = '12')
+    )
+    FOLDER = '/1 - connectivity/base views'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD ds_excel(
+        I18N fr_euro
+        CONSTRAINTS (
+             ADD id (any) OPT ANY
+             ADD name (any) OPT ANY
+        )
+        OUTPUTLIST (id, name
+        )
+        WRAPPER (custom ds_excel)
+    );
+
